@@ -1,5 +1,5 @@
 .userCard {
-  width: 100%;
+  width: auto;
   height: 100%;
   padding: 12px;
   box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
@@ -11,7 +11,7 @@
 
 .userCard div img {
   border-radius: 10px;
-  width: 100%;
+  width: 450px;
   height: auto;
   object-fit: contain;
   margin-bottom: 30px;
@@ -24,10 +24,14 @@
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 820px) {
   .userCard {
-
     min-width: 50%;
-    padding: 8px;
+    padding: 1%;
+    overflow: hidden;
+
   }
+  .userCard div img { max-width: 100%; padding: 1%;
+
+    }
 }

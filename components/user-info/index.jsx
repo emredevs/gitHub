@@ -16,8 +16,8 @@ export default function UserInfo() {
       <div>Nickname :{userInfo.login}</div>
       <div>Followers: {userInfo.followers}</div>
       <div>Following: {userInfo.following}</div>
-      <div>Public Repos: {userInfo.public_repos}</div>
       <div>Public Gists: {userInfo.public_gists}</div>
+      <div>Public Repos: {userInfo.public_repos}</div>
       <div>created at: {userInfo.created_at}</div>
       <div>updated at :{userInfo.updated_at}</div>
     </div>
