@@ -3,7 +3,9 @@ import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import styles from "./styles.module.css";
 import GitHubContext from "../../context/github-context";
+import { useRouter } from "next/navigation";
 export default function UserForm({ params }) {
+  const router = useRouter();
   const { setGitRepo, setUser, setUserInfo, user, userInfo, gitRepo } =
     useContext(GitHubContext);
   const [inputNone, setInputNone] = useState(true);
@@ -21,7 +23,6 @@ export default function UserForm({ params }) {
         .get(`https://api.github.com/users/${params}/repos`)
         .then((res) => setGitRepo(res.data));
     }, [params]);
-
   const formSubmit = (e) => {
     e.preventDefault();
     axios
@@ -37,6 +38,7 @@ export default function UserForm({ params }) {
       .then((res) => setGitRepo(res.data));
     setUser("");
     setInputNone(false);
+    router.push(`/${user}`);
   };
 
   console.log(user);

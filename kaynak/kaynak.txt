@@ -1,0 +1,2 @@
+user info:    https://api.github.com/users/emredevs
+user repo:    https://api.github.com/users/emredevs/repos
