@@ -22,6 +22,7 @@ export default function UserForm({ params }) {
       axios
         .get(`https://api.github.com/users/${params}/repos`)
         .then((res) => setGitRepo(res.data));
+      setInputNone(false);
     }, [params]);
   const formSubmit = (e) => {
     e.preventDefault();
