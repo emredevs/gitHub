@@ -1,14 +1,9 @@
 import UserForm from "@/components/user-form";
 import React from "react";
-import { GitHubContextProvider } from "../../context/github-context";
-import GithubContainer from "../github-container";
-export default function HomeContainer({ params }) {
+export default function HomeContainer() {
   return (
     <div>
-      <GitHubContextProvider>
-        <UserForm params={params} />
-        <GithubContainer />
-      </GitHubContextProvider>
+      <UserForm />
     </div>
   );
 }

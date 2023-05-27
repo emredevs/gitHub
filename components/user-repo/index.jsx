@@ -1,9 +1,18 @@
 "use client";
-import React, { useContext } from "react";
-import GitHubContext from "../../context/github-context";
+import React, { useEffect, useState } from "react";
 import style from "./style.module.css";
-export default function UserRepo() {
-  const { gitRepo } = useContext(GitHubContext);
+import axios from "axios";
+export default function UserRepo({ params }) {
+  const [gitRepo, setGitRepo] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(`https://api.github.com/users/${params}/repos`)
+      .then((res) => setGitRepo(res.data))
+      .catch((err) => {
+        return console.error(err);
+      });
+  }, [params]);
   return (
     <div className={style.userRepo}>
       {gitRepo.map((repo) => (

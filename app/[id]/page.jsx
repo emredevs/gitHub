@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "../page.module.css";
-import HomeContainer from "@/container/home";
+import GithubContainer from "@/container/github-container";
 export default function UserPage({ params }) {
   return (
     <div className={styles.main}>
-      <HomeContainer params={params.id} />
+      <GithubContainer params={params.id} />
     </div>
   );
 }
