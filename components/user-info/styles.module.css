@@ -63,4 +63,6 @@
   .userCard div img { max-width: 100%; padding: 1%;
 
     }
+    .userInfoContainer>div{flex-wrap: nowrap; width: 100%; height: 100%;}
+
 }
