@@ -22,7 +22,7 @@ export default function UserInfo({ params }) {
         alert("Kullanıcı bulunamadı");
         router.push("/");
       });
-  }, [params, router]);
+  }, [params]);
 
   if (!isActive) {
     return null; // Hata durumunda içeriği gizlemek için null döndürüldü
